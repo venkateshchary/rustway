@@ -1,0 +1,15 @@
+# Force all text files to use LF line endings
+* text=auto eol=lf
+
+# Explicitly enforce LF for source files
+*.rs text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+
+# Binary files should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.exe binary
+*.dll binary
+*.wasm binary
