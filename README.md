@@ -14,8 +14,9 @@ These project_name/package name must follow these rules
 
 ---
 
-1. Data types
+1. [Data types](data_types_1_learning/readme.md)
 2. conditions
 3. [structs](3-structs-l/structs.md)
 4. [println!](3-structs-l/println.md)
 5. [methods](methods_4_learning/readme.md)
+6. [enums](enum_5_learning/readme.md)
