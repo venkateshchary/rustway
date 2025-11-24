@@ -35,6 +35,7 @@ fn main() {
     let capital_name = capitalize_name(name);
     println!("capital name:{:?}",capital_name);
     fn capitalize_name(name: String)-> String{
+        println!("length of name:{}",name.len()); // to get the number of characters in a string
         name.to_uppercase()
     }
     /*
