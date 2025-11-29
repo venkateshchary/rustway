@@ -27,3 +27,8 @@ let sum = x + y.unwrap_or(0);
 
 | Like bool default is false | string default is "" | integer default  is 0 .. etc 
 
+### map_or(default,f)
+
+### map(function)
+
+### map_or_else(default_fn, f)

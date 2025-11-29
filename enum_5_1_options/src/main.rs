@@ -108,7 +108,7 @@ fn main() {
     let balance: i32 = jan_month_salary- jan_month_expenditure;
     It will give you error  no implementaion for i32+Option<i32>
     Option<i32> (which can be Some(i32) or None)
-    ****************** we could use the unwrap_or method here
+    ****************** we could use the unwrap_or / unwrap_or_default method here
     */
 
     let balance: i32 = jan_month_salary - jan_month_expenditure.unwrap_or(10000);
