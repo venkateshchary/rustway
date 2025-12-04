@@ -20,3 +20,6 @@ These project_name/package name must follow these rules
 4. [println!](3-structs-l/println.md)
 5. [methods](methods_4_learning/readme.md)
 6. [enums](enum_5_learning/readme.md)
+   1. [option](enum_5_1_options/readme.md)
+   2. [match](enum_5_2_match/readme.md)
+   3. [if let else](enum_5_3_if_let_else/readme.md)
