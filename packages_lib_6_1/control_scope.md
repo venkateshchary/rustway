@@ -29,3 +29,37 @@ An `Asparagus` type in the garden vegetables module would be found at `crate::ga
 Code within a module is private from its parent modules by default. 
 - To make a module public, declare it with `pub mod` instead of `mod`
 - To make items within a public module public as well, use pub before their declarations.
+
+
+### Declaring a module that don't have submodules
+
+```rust
+src
+├── garden.rs
+└── main.rs
+```
+
+### Declaring a module that contains the submodules
+
+```rust
+backyard
+└── src
+    ├── garden          <-- folder for garden's submodules
+    │   └── vegetables.rs
+    ├── garden.rs       <-- declares module `garden`
+    └── main.rs
+```
+
+### Declaring a module that contains 2 inner submodules
+```rust
+src
+├── main.rs
+├── garden.rs
+└── garden
+    ├── vegetables.rs
+    └── vegetables
+        └── leafy.rs
+```
+> Note:
+> If you observe carefully if module contains submodules then we need to define a folder with same name of module
+> inside of it we need to add the submodule
