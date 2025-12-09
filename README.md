@@ -23,3 +23,5 @@ These project_name/package name must follow these rules
    1. [option](enum_5_1_options/readme.md)
    2. [match](enum_5_2_match/readme.md)
    3. [if let else](enum_5_3_if_let_else/readme.md)
+7. [Packages](packages_lib_6_1/readme.md)
+   4. [try_operator](packages_lib_6_1/try_operator.md)
