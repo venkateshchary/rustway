@@ -2,10 +2,14 @@
 ### Crates(lib)
 1. **Binary Crate**
    >Binary crates are programs you can compile to an executable that you can run, such as a command line program or a server. Each must have a function called main that defines what happens when the executable runs. All the crates we’ve created so far have been binary crates.
+   
+   > output is **Executable**
 
 2. **Library Crate**
 
     >Library crates don’t have a main function, and they don’t compile to an executable. Instead, they define functionality intended to be shared with multiple projects.
+
+   > output is **Reusable library(no main function)**
 
 ### Package
 A package is a bundle of one or more crates that provides a set of functionality. A package contains a `Cargo.toml` file that describes how to build those crates.
@@ -37,3 +41,6 @@ If a package contains src/main.rs and src/lib.rs, it has two crates: a binary an
 A package can have multiple binary crates by placing files in the src/bin directory: each file will be a separate binary crate
 
 **Let's learn about next topic** -> [control_scope](control_scope.md)
+
+
+> **The contents of either of these two files(main.rs/lib.rs) form a module named crate**
