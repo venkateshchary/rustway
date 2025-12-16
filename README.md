@@ -24,4 +24,7 @@ These project_name/package name must follow these rules
    2. [match](enum_5_2_match/readme.md)
    3. [if let else](enum_5_3_if_let_else/readme.md)
 7. [Packages](packages_lib_6_1/readme.md)
-   4. [try_operator](packages_lib_6_1/try_operator.md)
+   1. [try_operator](packages_lib_6_1/try_operator.md)
+   2. [control_scope](packages_lib_6_1/control_scope.md)
+   3. [private vs publice](packages_lib_6_1/private_public.md)
+   4. [super](packages_lib_6_1/super.md)

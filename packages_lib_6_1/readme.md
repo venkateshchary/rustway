@@ -44,3 +44,5 @@ A package can have multiple binary crates by placing files in the src/bin direct
 
 
 > **The contents of either of these two files(main.rs/lib.rs) form a module named crate**
+
+**Super Keyword** -> [Super](super.md)
