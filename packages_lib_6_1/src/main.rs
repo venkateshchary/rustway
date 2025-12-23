@@ -1,7 +1,12 @@
+use std::io;
+use rand::Rng;
+
 mod file_reader;
 
 fn main() {
     println!("Hello, world!");
+    let secret_number = rand::random::<i8>();
+    println!("Secret number: {}", secret_number);
     let input_file_path = "";
     match file_reader::create_new_file(input_file_path){
         Ok(msg)=>{
