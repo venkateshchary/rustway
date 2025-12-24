@@ -28,3 +28,4 @@ These project_name/package name must follow these rules
    2. [control_scope](packages_lib_6_1/control_scope.md)
    3. [private vs publice](packages_lib_6_1/private_public.md)
    4. [super](packages_lib_6_1/super.md)
+   5. [use](packages_lib_6_1/use.md)
