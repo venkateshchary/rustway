@@ -12,3 +12,21 @@ Unlike other data types(tuple, array , char and string) struct doesn't have debu
 But we have to explicitly opt in to make that functionality available for our struct
 
 To do debug we need to add the outer attribute Debug **#[derive(Debug)]** on top of struct
+
+
+
+Rust intentionally does not support named arguments in functions.
+```rust
+pub fn new(curry: Curry, cust_name: String) -> Self
+```
+new(...) is a function, not a struct.
+
+👉 Functions do not accept named arguments in Rust.
+
+```rust
+let customer1 = crate::menu::Lunch::new(
+    customer_name: String::from("Venkatesh"),
+    curry: crate::menu::Curry::NonVeg(Chicken),
+);
+```
+**Syntax (field_name: value) is allowed ONLY when you create a struct directly:**
