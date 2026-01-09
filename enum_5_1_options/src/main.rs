@@ -106,7 +106,7 @@ fn main() {
     There is a case like if there is no expenditure on this jan month and may be there is expenditure
         if you want to know the balance then in that case we need to remove the expenditure from the salary
     let balance: i32 = jan_month_salary- jan_month_expenditure;
-    It will give you error  no implementaion for i32+Option<i32>
+    It will give you error  no implementation for i32+Option<i32>
     Option<i32> (which can be Some(i32) or None)
     ****************** we could use the unwrap_or / unwrap_or_default method here
     */
