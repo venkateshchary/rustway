@@ -132,3 +132,10 @@ v.retain(|x| condition);
 - No borrow conflicts
 - Modifies vector in place
 
+#### remove(index)
+    
+- Removes and returns the element at the given index, shifting all elements after it to the left
+
+#### pop()
+
+- Removes and returns the last element as an Option<T>

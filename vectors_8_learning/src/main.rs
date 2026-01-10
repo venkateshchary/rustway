@@ -1,3 +1,7 @@
+mod commonly_used_methods;
+
+use commonly_used_methods::{truncate, first, remove_by_index, pop_from_vector, reverse};
+
 use rand::Rng;
 #[derive(Debug)]
 struct User{
@@ -135,7 +139,7 @@ fn main() {
         Give me a vector containing numbers from 0 to 9
      */
 
-    let mut v_range:Vec<i32> = (0..=10).collect();
+    let mut v_range:Vec<i32> = (0..=50).collect();
     println!("v_range: {:?}",v_range);
 
     for i in 0..=10{
@@ -179,6 +183,7 @@ fn main() {
     let email = [String::from("alice@gmail.com"),
         String::from("bob@gmail.com"),String::from("charlie@gmail.com"),
         String::from("dave@gma_il.com")];
+    println!("{:?}",email[0]);
     let is_active=[true, false, true, true];
     println!("{:?}",is_active);
     println!("{:?}", email);
@@ -207,4 +212,58 @@ fn main() {
     println!("length: {:?}", user_vector.len());
     println!("capacity: {:?}", user_vector.capacity());
 
+    println!("v_range: {:?}",v_range); //[1,3,5,7,9]
+    /*
+    truncate to specific length
+     */
+    // v_range.truncate(8); // [1,3,5,7]
+    println!("v_range: {:?}",v_range);
+
+    truncate(&mut v_range, 9);
+    println!("v_range: {:?}",v_range);
+    let  v_first: Vec<i32> = Vec::new();
+    /*
+        2 ways we can write it
+        if we send empty vector
+            option1: let first_number: Option<&i32> = first(&v_range);
+              return:  it will return None
+            option2: Won't execute
+                Because if let matches the condition
+                if let Some(first)
+     */
+    let first_number = first(&v_first);
+    println!("first_number: {:?}",first_number);
+
+    if let Some(first) = first(&v_first){
+        println!("first: {:?}", first);
+    }
+    /*
+        remove particular element from the vector using the remove by index
+     */
+    println!("------------------ Remove --------");
+    let index_to_be_removed: usize = 1;
+    if let Some(removed_value) = remove_by_index(&mut v_range, index_to_be_removed){
+        println!("removed_value: {:?} at index: {:?}", removed_value, index_to_be_removed);
+    }else {
+        println!("removed_value not found");
+    }
+    /*
+        pop
+     */
+    println!("-----------------pop -----------------");
+    println!("v_range: {:?}",v_range);
+    // It will remove the last value from a vector
+    if let Some(removed_value) = pop_from_vector(&mut v_range){
+        println!("removed_value: {:?}", removed_value);
+    }
+
+    println!("---------------------REVERSE VECTOR ------------------");
+    reverse(&mut v_range);
+    println!("v_range: {:?}",v_range);
+    for i in 0..v_range.len(){
+        println!("v_range[{}]: {:?}",i,v_range[i]);
+    }
+
+
 }
+
