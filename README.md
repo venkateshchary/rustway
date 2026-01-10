@@ -29,3 +29,5 @@ These project_name/package name must follow these rules
    3. [private vs publice](packages_lib_6_1/private_public.md)
    4. [super](packages_lib_6_1/super.md)
    5. [use](packages_lib_6_1/use.md)
+8. [Collection](vectors_8_learning/readme.md)
+   1. [usize](vectors_8_learning/usize.md)
