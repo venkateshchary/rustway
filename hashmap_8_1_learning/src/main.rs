@@ -1,3 +1,8 @@
+mod text_splitter;
+mod strings_to_pig_latin;
+
+use text_splitter::{text_splitter_to_hashmap};
+use strings_to_pig_latin::{convert_to_pig_latin, better_way_computing_pig_latin};
 use std::collections::HashMap;
 
 fn main() {
@@ -103,8 +108,49 @@ fn main() {
     for value in vegetables.values() {
         println!("value: {:?}", value);
     }
-
-    if vegetables.contains_key(&String::from("Tomato")) {
-        println!("vegetable already exists: {:?}", vegetables.get(&String::from("Tomato")).unwrap());
+    let carrot = String::from("Carrot");
+    if vegetables.contains_key(&carrot) {
+        println!("vegetable already exists: {:?} ||value {:?}", &carrot, vegetables.get(&carrot));
+    } else {
+        println!("inserting new vegetable");
+      vegetables.insert(String::from("carrot"), 40);
     }
+    /*
+        in the same context if it is already exists.
+        I wanted to update the value
+     */
+       if let Some(value) = vegetables.get_mut(&carrot) {
+           println!("vegetable exists: {:?}", value);
+           *value = 80;
+    }
+    println!("-------- ENTRY -------------");
+    // Using Entry
+    let spinach = String::from("spinach");
+    let cabbage = String::from("cabbage");
+
+    // option 1: if not exist insert
+    vegetables.entry(spinach).or_insert(60);
+
+    println!("vegetables: {:?}", vegetables); // {"carrot": 40, "LadyFinger": 35, "Tomato": 24, "spinach": 60, "Onions": 50}
+
+    // option 2: if exist modify the update value
+    vegetables.entry("spinach".to_string()).and_modify(|v| *v += 2);
+
+    println!("vegetables: {:?}", vegetables); // vegetables: {"spinach": 62, "Tomato": 24, "LadyFinger": 35, "Onions": 50, "carrot": 40}
+
+    // option 3: if not exists then insert or if exists update it
+    println!(" if not exists then insert or if exists update it");
+    vegetables.entry(cabbage).and_modify(|v| *v += 2).or_insert(20);
+
+    println!("vegetables: {:?}", vegetables); // {"carrot": 40, "Tomato": 24, "spinach": 62, "LadyFinger": 35, "Onions": 50, "cabbage": 20}
+
+    for (key, value) in &vegetables {
+        println!("key: {:?}, value: {:?}", key, value);
+    }
+    println!("--------- text splitter with hashmap----");
+    println!("splitter return : {:?}",text_splitter_to_hashmap());
+    let phrase: String = "hash maps will provide a large amount of functionality necessary in programs".to_string();
+
+    // convert_to_pig_latin(&phrase);
+    better_way_computing_pig_latin(&phrase);
 }
