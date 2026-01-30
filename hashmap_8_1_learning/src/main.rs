@@ -1,8 +1,19 @@
 mod text_splitter;
 mod strings_to_pig_latin;
+mod company;
+mod struct_as_a_key;
 
 use text_splitter::{text_splitter_to_hashmap};
-use strings_to_pig_latin::{convert_to_pig_latin, better_way_computing_pig_latin};
+use strings_to_pig_latin::{convert_to_pig_latin,
+                           better_way_computing_pig_latin,
+                           combined_logic_computing_pig_latin
+};
+use company::{company_interface,
+              better_way_company
+};
+
+use struct_as_a_key::{ create_user};
+
 use std::collections::HashMap;
 
 fn main() {
@@ -153,4 +164,24 @@ fn main() {
 
     // convert_to_pig_latin(&phrase);
     better_way_computing_pig_latin(&phrase);
+
+    // better way of writing code improved version
+    println!("-- Input: {:?}", &phrase);
+    let output:String = combined_logic_computing_pig_latin(&phrase);
+    println!("output: {:?}", output);
+
+    // company
+    let user_input1 = "Add Sally to Engineering";
+    let user_input2: &str = "Add Molly to Sales";
+    company_interface(&user_input1);
+    company_interface(&user_input2);
+
+    let mut company_hmap:HashMap<String,Vec<String>> = HashMap::new();
+    better_way_company(&user_input2, &mut company_hmap);
+    better_way_company(&user_input2, &mut company_hmap);
+    println!("company: {:?}", company_hmap);
+    let list_departments = "List Sales";
+
+    better_way_company(&list_departments, &mut company_hmap);
+    println!("create user: {:?}", create_user());
 }

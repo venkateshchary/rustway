@@ -50,7 +50,6 @@ pub fn convert_to_pig_latin(phrase: &str) {
 }
 
 pub fn better_way_computing_pig_latin(phrase: &str) {
-    let mut result = String::new();
     let mut result_str :String = String::from("");
     for word in phrase.split_whitespace(){
         println!("word: {:?}", word);
@@ -103,4 +102,38 @@ pub fn better_way_computing_pig_latin(phrase: &str) {
         println!("result: {:?}", result_str);
 
     }
+}
+
+pub fn combined_logic_computing_pig_latin(phrase: &str) -> String {
+    let mut result_str :String = String::new();
+    for word in phrase.split_whitespace(){
+        println!("word: {:?}", word);
+        let mut chars: Chars = word.chars();
+        println!("chars: {:?}", chars);
+        match chars.next() {
+            Some('a') | Some('e') | Some('i') | Some('u') | Some('o') => {
+                println!("vowels: e");
+                result_str.push_str(word);
+                result_str.push_str("-hay");
+                result_str.push(' ');
+            }
+            Some(first_char) => {
+                println!("consonant--{:?}", first_char);
+                // first char already moved from chars because we used the next
+                // so remaining will convert to string
+                // collect will take an iterator and convert it into collection
+                let rest: String = chars.collect();
+                println!("rest: {:?}", rest);
+                result_str.push_str(&rest);
+                result_str.push('-');
+                result_str.push(first_char);
+                result_str.push_str("ay");
+                result_str.push(' ');
+            }
+            None => {
+                println!("---");
+            }
+        }
+    }
+    result_str
 }
