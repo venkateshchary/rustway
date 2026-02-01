@@ -31,9 +31,6 @@ These project_name/package name must follow these rules
    5. [use](packages_lib_6_1/use.md)
 8. [Collection](vectors_8_learning/readme.md)
    1. [usize](vectors_8_learning/usize.md)
-<<<<<<< Updated upstream
-=======
    2. [HashMap](hashmap_8_1_learning/readme.md)
    3. [CommonlyUsedMethods](hashmap_8_1_learning/hashmap_methods.md)
 9. [Errors](errors_handling_9_learning/readme.md)
->>>>>>> Stashed changes
