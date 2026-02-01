@@ -1,0 +1,10 @@
+[package]
+name = "errors_handling_9_learning"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+panic = "unwind" # default value is unwind
+debug=false # default value is false
+
+[dependencies]
