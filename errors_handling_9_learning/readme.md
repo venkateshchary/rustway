@@ -66,3 +66,9 @@ the programme immediately
 
 macro
 > panic!
+
+### `?` Operator
+
+? operator in a function that returns Result, Option, or another type that implements FromResidual
+
+ You can use the ? operator on a Result in a function that returns Result, and you can use the ? operator on an Option in a function that returns Option, but you can’t mix and match. The ? operator won’t automatically convert a Result to an Option or vice versa; in those cases, you can use methods like the ok method on Result or the ok_or method on Option to do the conversion explicitly.

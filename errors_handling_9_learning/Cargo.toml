@@ -8,3 +8,5 @@ panic = "unwind" # default value is unwind
 debug=false # default value is false
 
 [dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
