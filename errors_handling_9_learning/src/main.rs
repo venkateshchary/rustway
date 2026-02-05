@@ -6,6 +6,7 @@ mod error_way;
 mod file_reader;
 mod panic_way;
 mod json_file_reader;
+mod list_users_reader;
 
 // use error_code_way::file_exist_check_with_error_code;
 use error_way::{open_file_with_if_case, open_file_with_match_case};
@@ -17,6 +18,7 @@ use file_reader::{read_file,
 
 use panic_way::{panic_with_custom_msg};
 use json_file_reader::{json_reader};
+use list_users_reader::{reader_list_file};
 
 
 fn main() {
@@ -123,6 +125,8 @@ fn main() {
     panic_with_custom_msg(&existing_file_path);
 
     json_reader(&existing_file_path);
+
+    reader_list_file();
 
 
 }
