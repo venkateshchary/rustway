@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "year_born": 1998
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "year_born": 1994
+  },
+  {
+    "id": 3,
+    "name": "Carol",
+    "year_born": 2011
+  },
+  {
+    "id": 4,
+    "name": "David",
+    "year_born": 2026
+  },
+  {
+    "id": 5,
+    "name": "Eve Davis",
+    "year_born": 1999
+  }
+]
