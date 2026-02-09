@@ -14,6 +14,22 @@ These project_name/package name must follow these rules
 
 ---
 
+### Some of key terms
+
+#### Prelude
+Rust automatically imports some very common types into every scope.
+This is called the Prelude.
+
+Things in the prelude include:
+
+* Vec
+* String
+* Option
+* Result
+* i32, usize, bool
+* Some, None
+---
+
 1. [Data types](data_types_1_learning/readme.md)
 2. conditions
 3. [structs](3-structs-l/structs.md)

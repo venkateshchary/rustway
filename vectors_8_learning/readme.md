@@ -72,6 +72,18 @@ let numbers_ten:Vec<i32> = (0..10).collect();
 ```
 >**Collect will take an iterator and transform into collection**
 
+> collect() uses the variable’s type to decide what to build.
+```rust
+let rest: String = chars.collect();
+// chars() -> String
+```
+
+Same iterator
+
+Different target type
+
+Different result
+
 ### Accessing the elements of Vector
 
 While Iterating the elements you can't delete
