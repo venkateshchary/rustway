@@ -49,3 +49,4 @@ Things in the prelude include:
    1. [usize](vectors_8_learning/usize.md)
    2. [HashMap](hashmap_8_1_learning/readme.md)
    3. [CommonlyUsedMethods](hashmap_8_1_learning/hashmap_methods.md)
+9. [Errors](errors_handling_9_learning/readme.md)
